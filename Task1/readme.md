@@ -1,1 +1,1 @@
-Task 1
+Task 1: Develop a single Python function that receives two numbers and returns their sum.

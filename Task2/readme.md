@@ -1,1 +1,1 @@
-Task 2
+Task 2: Develop an AWS Lambda function that crops faces from an image that is stored on AWS S3 storage and stores faces as separated images back to S3.
