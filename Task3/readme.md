@@ -2,6 +2,10 @@
 
 Infrastructure as a Code is a technique to code your infrastructure and use a tool that deploys that infrastructure, instead of manual deployment.
 
+## Prerequisites
+
+### Recap the needed information for function deployment
+
 Before doing this task, go back to Task 1 and recap which information was needed while creating a function:
 
 - Provider (Terraform supports multiple providers, you need to select it)
@@ -13,4 +17,14 @@ Before doing this task, go back to Task 1 and recap which information was needed
     - runtime
     - role
 
-You need to run terraform init and then terraform deploy.
+### Install Terraform
+
+Use the tutorial based on your operating system.
+
+
+## Deploy the function
+
+You can run 
+- terraform init 
+- terraform deploy
+- terraform destroy (to delete the infrastructure)
