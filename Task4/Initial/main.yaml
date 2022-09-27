@@ -1,0 +1,5 @@
+name: OF THE WORKFLOW (e.g. deploy)
+
+DEFINE THE EVENT AND BRANCHES (push on master)
+
+DEFINE JOBS and STEPS
