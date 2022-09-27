@@ -22,10 +22,10 @@ data "archive_file" "lambda_terraform_test" {
 # Test Function "plus"
 resource "aws_lambda_function" "aws_function" {
   function_name    = "plus"
-  filename         = lambda_terraform_test.output_path
+  filename         = data.archive_file.lambda_hello_world.output_path
   runtime          = "python3.9"
   handler          = "function.lambda_handler"
-  source_code_hash = filebase64sha256(lambda_terraform_test.output_path)
+  source_code_hash = filebase64sha256(data.archive_file.lambda_hello_world.output_path)
   role             = aws_iam_role.lambda_exec.arn
   #layers = ["arn:aws:lambda:us-east-1:770693421928:layer:Klayers-p39-pillow:1"] #for face recognition
 }
