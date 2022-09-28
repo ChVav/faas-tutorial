@@ -9,10 +9,10 @@ terraform {
 
 }
 provider "aws" {
-  region = "us-east-1"
+  region = "eu-central-1"
 }
 
-data "archive_file" "lambda_terraform_test" {
+data "archive_file" "lambda_terraform_test" { #specific for provider
   type = "zip"
 
   source_file = "${path.module}/function.py"
@@ -27,7 +27,8 @@ resource "aws_lambda_function" "aws_function" {
   handler          = "function.lambda_handler"
   source_code_hash = filebase64sha256(data.archive_file.lambda_hello_world.output_path)
   role             = aws_iam_role.lambda_exec.arn
-  #layers = ["arn:aws:lambda:us-east-1:770693421928:layer:Klayers-p39-pillow:1"] #for face recognition
+  #layers = ["arn:aws:lambda:us-east-1:770693421928:layer:Klayers-p39-pillow:1"] # existing layer for face recognition
+  #timeout can also be specified here
 }
 
 resource "aws_iam_role" "lambda_exec" {
