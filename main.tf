@@ -24,7 +24,7 @@ resource "aws_lambda_function" "aws_function" {
 }
 
 resource "aws_iam_role" "lambda_exec3" {
-  name = "github_actions_deploy"
+  name = "github_actions_deploy3"
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [{
