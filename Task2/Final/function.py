@@ -11,10 +11,10 @@ def lambda_handler(event, context):
     :param context:
     :return: categories, number of categories, intermediate path, output path
     """
-    picture_path = event['filePaths']
-    input_bucket_name = event['arnInputBucket']
-    intermediate_bucket_name = event['arnIntermediateBucket']
-    output_bucket_name = event['arnOutputBucket']
+    picture_path = event['filePaths'] #which image, actually name "SashkoRistov4MP.jpg"
+    input_bucket_name = event['arnInputBucket'] #which bucket, e.g. "workshopserverless"
+    intermediate_bucket_name = event['arnIntermediateBucket'] #bucket for hidden processing
+    output_bucket_name = event['arnOutputBucket'] #bucket for final input
 
     recognition_client = boto3.client('rekognition')
 
