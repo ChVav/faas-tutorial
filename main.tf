@@ -20,7 +20,7 @@ resource "aws_lambda_function" "aws_function" {
   runtime          = "python3.9"
   handler          = "function.lambda_handler"
   source_code_hash = filebase64sha256("function.zip")
-  role             = aws_iam_role.lambda_exec.arn
+  role             = aws_iam_role.lambda_exec3.arn
 }
 
 resource "aws_iam_role" "lambda_exec3" {
@@ -40,6 +40,6 @@ resource "aws_iam_role" "lambda_exec3" {
 }
 
 resource "aws_iam_role_policy_attachment" "lambda_policy" {
-  role       = aws_iam_role.lambda_exec.name
+  role       = aws_iam_role.lambda_exec3.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }
