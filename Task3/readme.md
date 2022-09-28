@@ -25,6 +25,6 @@ Use the tutorial based on your operating system.
 ## Deploy the function
 
 You can run 
-- terraform init 
-- terraform deploy
-- terraform destroy (to delete the infrastructure)
+- terraform *init*
+- terraform *apply*
+- terraform *destroy* (to terminate the infrastructure services)
