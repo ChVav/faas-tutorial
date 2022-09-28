@@ -16,10 +16,10 @@ provider "aws" {
 # Test Function "plus"
 resource "aws_lambda_function" "aws_function" {
   function_name    = "plus3"
-  filename         = function.zip
+  filename         = "function.zip"
   runtime          = "python3.9"
   handler          = "function.lambda_handler"
-  source_code_hash = filebase64sha256(function.zip)
+  source_code_hash = filebase64sha256("function.zip")
   role             = aws_iam_role.lambda_exec.arn
 }
 
