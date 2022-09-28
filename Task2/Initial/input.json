@@ -1,0 +1,6 @@
+{
+    "filePaths": "SashkoRistov4MP.jpg",
+    "arnInputBucket": "serverlessworkshop",
+    "arnIntermediateBucket": "serverlessworkshop",
+    "arnOutputBucket": "serverlessworkshop"
+}
