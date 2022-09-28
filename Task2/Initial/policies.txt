@@ -4,20 +4,7 @@
         {
             "Effect": "Allow",
             "Action": [
-                "rekognition:*"
-            ],
-            "Resource": "*"
-        }
-    ]
-}
-
-
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
+                "rekognition:*",
                 "s3:*",
                 "s3-object-lambda:*"
             ],
